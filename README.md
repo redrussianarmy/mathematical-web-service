@@ -42,7 +42,8 @@ If you are using VSCode, the tasks config file was created in the **.vscode** fi
   When the task is completed, you can find coverage rates by opening ```index.html``` in the ```coverage-report``` folder.
   
   <img src="https://user-images.githubusercontent.com/24498747/160244757-454c962f-acab-4f31-88c7-2ef3e9bcffb4.png" height="500"/> 
-  <img src="https://user-images.githubusercontent.com/24498747/160245049-fb8e12c6-b825-4fd1-bd63-eda5dbe35845.png" width="600"/> 
+  <img src="https://user-images.githubusercontent.com/24498747/160274670-6ca4c7db-c285-41c7-a845-e196a2d346c7.png" width="500"/> 
+
 
 ---
 

@@ -1,5 +1,7 @@
 # Mathematical Web Service
 
+[![Python 3.10.1](https://img.shields.io/badge/python-3.10.1-blue.svg)](https://www.python.org/downloads/release/python-3101/)
+
 This is a web service which calculates and provides results for the following algorithms via a REST API:
 
 - The n:th Fibonacci number F(n) with the value of n provided by the user.

@@ -1,0 +1,32 @@
+{
+    // ctrl + shift + b to run tasks automatically
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Prepare Environment",
+            "command": "python",
+            "type": "shell",
+            "args": [
+                "\"${workspaceRoot}\\scripts\\prepare_env.py\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Unit Tests and Coverage",
+            "command": "python",
+            "type": "shell",
+            "args": [
+                "\"${workspaceRoot}\\scripts\\ut_coverage.py\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

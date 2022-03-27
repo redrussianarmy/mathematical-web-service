@@ -18,6 +18,7 @@ This is a web service which calculates and provides results for the following al
   - [Fibonacci Algorithm](#fibonacci-algorithm)
   - [Ackermann Algorithm](#ackermann-algorithm)
   - [Factorial Algorithm](#factorial-algorithm)
+- [How to Deploy the Application to AWS Elastic Beanstalk](#how-to-deploy-the-application-to-aws-elastic-beanstalk)
 
 ---
 
@@ -41,7 +42,8 @@ If you are using VSCode, the tasks config file was created in the **.vscode** fi
   When the task is completed, you can find coverage rates by opening ```index.html``` in the ```coverage-report``` folder.
   
   <img src="https://user-images.githubusercontent.com/24498747/160244757-454c962f-acab-4f31-88c7-2ef3e9bcffb4.png" height="500"/> 
-  <img src="https://user-images.githubusercontent.com/24498747/160245049-fb8e12c6-b825-4fd1-bd63-eda5dbe35845.png" width="600"/> 
+  <img src="https://user-images.githubusercontent.com/24498747/160274670-6ca4c7db-c285-41c7-a845-e196a2d346c7.png" width="500"/> 
+
 
 ---
 
@@ -49,11 +51,20 @@ If you are using VSCode, the tasks config file was created in the **.vscode** fi
 
 - ### Run Server
 
-  - If you are using VSCode, the application can be started if you select the ```Run Web Service``` option from the ```Run and Debug``` menu.
+  - **[OPT1]** If you have docker installed on your computer, run the following commands in order.
+    ```
+    docker build -t web-service:1.0 .
+    ```
+    
+    ```
+    docker run -p 8000:8000 web-service:1.0
+    ```
+
+  - **[OPT2]** If you are using VSCode, the application can be started if you select the ```Run Web Service``` option from the ```Run and Debug``` menu.
 
     ![image](https://user-images.githubusercontent.com/24498747/160242849-c7c03010-c008-40f3-bd9a-8534cd350ffb.png)
 
-  - If you are going to run the application from the terminal, you can type the following command. Make sure you are on the same path as the manage.py file.
+  - **[OPT3]** If you are going to run the application from the terminal, you can type the following command. Make sure you are on the same path as the manage.py file.
 
     ```
     py manage.py runserver
@@ -83,7 +94,9 @@ If you are using VSCode, the tasks config file was created in the **.vscode** fi
 
     Response:
 
-      8
+      {
+        "result": 8
+      }
     
 
 - ### Ackermann Algorithm
@@ -94,7 +107,9 @@ If you are using VSCode, the tasks config file was created in the **.vscode** fi
 
     Response:
 
-      5
+      {
+        "result": 5
+      }
     
 
 - ### Factorial Algorithm
@@ -105,7 +120,14 @@ If you are using VSCode, the tasks config file was created in the **.vscode** fi
 
     Response:
 
-      720
+      {
+        "result": 720
+      }
     
-
 ---
+
+## How to Deploy the Application to AWS Elastic Beanstalk
+
+You can reach the official article on how to deploy this application to Elastic Beanstalk by clicking the link below.
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#python-django-configure-for-eb

@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Web Service",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\web_service\\manage.py",
+            "args": [
+                "runserver",
+                "0.0.0.0:8000"
+            ],
+            "django": true
+        },
+        {
+            "name": "Run UT Web Service",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}\\web_service\\manage.py",
+            "args": [
+                "test",
+                "algorithms.tests"
+            ],
+            "django": true
+        }
+    ]
+}
